@@ -1,0 +1,1 @@
+/usr/share/tokyonight-extra/vim/colors/tokyonight-day.vim

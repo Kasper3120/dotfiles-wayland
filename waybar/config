@@ -1,0 +1,70 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar at the bottom of your screen
+    "spacing": 0,
+    "height": 0, // Waybar height
+    "margin": 0,
+
+    // "width": 1366, // Waybar width
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "tray"],
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": false,
+        "tooltip": false,
+        "format-icons": {
+            "1:web": "",
+            "2:code": "",
+            "3:term": "",
+            "4:work": "",
+            "5:music": "",
+            "urgent": "",
+            "focused": "",
+            "default": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 25,
+        "spacing": 16
+    },
+    "clock": {
+        "format": "{:%H:%M | %a %d-%m-%Y}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "{usage}% "
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    
+    "network": {
+        "interface": "londonpvpn", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-disconnected": "Disconnected ⚠"
+    },
+   
+    "pulseaudio": {
+        //"scroll-step": 1,
+        "format": "{volume}% {icon}",
+        "format-muted": "",
+        "ingored-sinks": "Easy Effects Sink",
+        "ingored-sinks": "Renoir Radeon High Definition Audio Controller Digital Stereo (HDMI)",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "kitty pulsemixer"
+    },
+     "bluetooth": {
+    "on-click": "kitty bluetuith" 
+    },
+    }
