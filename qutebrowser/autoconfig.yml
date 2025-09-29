@@ -8,11 +8,23 @@ config_version: 2
 settings:
   backend:
     global: webengine
+  colors.webpage.bg:
+    global: null
+  colors.webpage.darkmode.algorithm:
+    global: lightness-cielab
+  colors.webpage.darkmode.enabled:
+    global: false
+  colors.webpage.darkmode.policy.images:
+    global: never
   content.headers.user_agent:
     global: Mozilla/5.0 ({os_info}) AppleWebKit/{webkit_version} (KHTML, like Gecko)
       {upstream_browser_key}/{upstream_browser_version_short} Safari/{webkit_version}
   content.javascript.clipboard:
     https://github.com: access-paste
+    https://gitlab.clarin-pl.eu: access-paste
+    https://rancher.e-science.pl: access-paste
+  content.notifications.enabled:
+    https://www.chess.com: true
   content.site_specific_quirks.enabled:
     global: true
   content.xss_auditing:

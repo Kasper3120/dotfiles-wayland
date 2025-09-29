@@ -108,6 +108,33 @@ plugins=(git)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias kcla="kubectl --kubeconfig ~/clarin/clarin.yaml"
+alias hcla="helm --kubeconfig ~/clarin/clarin.yaml"
+alias vcla="velero --kubeconfig ~/clarin/clarin.yaml"
+
+# kubectl aliases
+pf="kubectl --kubeconfig ~/clarin/clarin.yaml"
+alias kclapf="${pf} port-forward"
+alias kclagsec="${pf} get secret"
+alias kclagp="${pf} get pods"
+alias kclagsvc="${pf} get svc"
+alias kclagde="${pf} get deploy"
+
+alias tf="thefuck"
+
+kclash() { 
+    if [ "$#" -ne 2 ] && [ "$#" -ne 3 ]; then
+        echo "Usage: $0 <namespace> <pod> [command]"
+        return 1
+    fi
+    kubectl --kubeconfig ~/clarin/clarin.yaml exec -it -n "$1" "$2" -- /bin/bash
+    if [ $? -ne 0 ] && [ $? -ne 130 ]; then
+        kubectl --kubeconfig ~/clarin/clarin.yaml exec -it -n "$1" "$2" -- /bin/sh
+    fi
+    if [ $? -ne 0 ] && [ $? -ne 130 ] && [ -n "$3" ]; then
+        kubectl --kubeconfig ~/clarin/clarin.yaml exec -it -n "$1" "$2" -- $3
+    fi
+}
+
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -119,3 +146,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

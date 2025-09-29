@@ -1,0 +1,25 @@
+# TokyoNight colors for dunst
+# For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+
+[global]
+    format = "<b><i>%s</i><\b>\n<i>%b<\i>"
+
+[urgency_low]
+    background = "#1e2030"
+    foreground = "#c8d3f5"
+    frame_color = "#c8d3f5"
+
+[urgency_normal]
+    background = "#222436"
+    foreground = "#c8d3f5"
+    frame_color = "#c8d3f5"
+
+[urgency_critical]
+    background = "#2f334d"
+    foreground = "#c53b53"
+    frame_color = "#c53b53"
+[change-format]
+    appname = dunstify
+    format = "<b>%s</b>\n<i>%b</i>"
+[fullscreen]
+    fullscreen = show
