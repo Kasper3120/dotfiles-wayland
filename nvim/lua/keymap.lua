@@ -1,3 +1,4 @@
+
 local vk = vim.keymap
 vk.set('n', '<leader>lf', vim.lsp.buf.format, { desc = "Format buffer" })
 vk.set('n', '<leader>o', '<cmd>update<CR>,<cmd>source<CR>', { desc = "Source file" })
@@ -5,6 +6,8 @@ vk.set('n', '<leader>w', '<cmd>write<CR>', { desc = "Save" })
 vk.set('n', '<leader>q', '<cmd>quit<CR>', { desc = "Quit" })
 vk.set('n', '<leader>e', '<cmd>Oil<CR>', { desc = "Open Oil (dir browsing)" })
 vk.set('n', '<leader>lg', '<cmd>LazyGit<CR>', { desc = "LazyGit" })
+vk.set('n', '<leader>gd', vim.diagnostic.open_float, { desc = "Open diagnostics" })
+
 
 -- sed
 vk.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { noremap = true, silent = false, desc="Sed word" })
@@ -40,6 +43,7 @@ vk.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', { desc = "Fuzzy find 
 vk.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR>', { desc = "Fuzzy find in recent files" })
 vk.set('n', '<leader>fs', '<cmd>Telescope live_grep<CR>', { desc = "Fuzzy find string in cwd" })
 vk.set('n', '<leader>fc', '<cmd>Telescope grep_string<CR>', { desc = "Fuzzy Find string under cursor in cwd" })
+vk.set('n', '<leader>fd', '<cmd>Telescope diagnostics<CR>', { desc = "Fuzzy find diagnostics" })
 
 -- yank/paste
 vk.set('n', '<leader>y', '"+y', { desc = "Yank to \"+"})
