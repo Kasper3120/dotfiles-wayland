@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "tray"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "tray", "battery"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -29,6 +29,9 @@
         // "icon-size": 25,
         "spacing": 16
     },
+    "battery" : {
+        "format": "{}%"
+    },
     "clock": {
         "format": "{:%H:%M | %a %d-%m-%Y}",
         "tooltip": false
@@ -41,7 +44,7 @@
     },
     
     "network": {
-        "interface": "londonpvpn", // (Optional) To force the use of this interface
+        "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-disconnected": "Disconnected ⚠"
