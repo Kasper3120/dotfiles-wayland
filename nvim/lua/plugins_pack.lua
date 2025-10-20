@@ -6,7 +6,10 @@ vim.pack.add({
     { src = "https://github.com/nvim-telescope/telescope-fzf-native.nvim" },
     { src = "https://github.com/BurntSushi/ripgrep" },
     { src = "https://github.com/nvim-telescope/telescope.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter",          version = "main" },
+    {
+        src = "https://github.com/nvim-treesitter/nvim-treesitter",
+        version = "main"
+    },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/mason-org/mason-lspconfig.nvim" },
     { src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
@@ -35,4 +38,9 @@ vim.pack.add({
     { src = "https://github.com/jasonccox/vim-wayland-clipboard" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://codeberg.org/mfussenegger/nvim-jdtls" },
+    -- rest.nvim deps
+    { src = "https://github.com/j-hui/fidget.nvim" },
+    { src = "https://github.com/nvim-neotest/nvim-nio" },
+    { src = "https://github.com/rest-nvim/rest.nvim" },
+    { src = "file:///home/kasper/virl" }
 })
