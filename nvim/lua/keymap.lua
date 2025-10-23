@@ -56,3 +56,8 @@ vk.set('n', '<leader>P', '"+P', { desc = "Paste from \"+ (before cursor)"})
 
 -- system highlights
 vk.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "clear highlights"})
+
+-- chmod and execute
+local buf_name = vim.api.nvim_buf_get_name(0)
+vk.set('n', '<leader>ux', '<cmd>! chmod +x '..buf_name, { desc = "make current buffer executable"})
+vk.set('n', '<leader>ue', '<cmd>! '..buf_name, { desc = "execute current buffer"})
