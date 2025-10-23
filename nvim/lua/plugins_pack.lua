@@ -38,9 +38,4 @@ vim.pack.add({
     { src = "https://github.com/jasonccox/vim-wayland-clipboard" },
     { src = "https://github.com/folke/which-key.nvim" },
     { src = "https://codeberg.org/mfussenegger/nvim-jdtls" },
-    -- rest.nvim deps
-    { src = "https://github.com/j-hui/fidget.nvim" },
-    { src = "https://github.com/nvim-neotest/nvim-nio" },
-    { src = "https://github.com/rest-nvim/rest.nvim" },
-    { src = "file:///home/kasper/virl" }
 })
