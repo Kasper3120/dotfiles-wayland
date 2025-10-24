@@ -1,5 +1,7 @@
 
 local vk = vim.keymap
+local cb = vim.api.nvim_buf_get_name(0)
+
 vk.set('n', '<leader>lf', vim.lsp.buf.format, { desc = "Format buffer" })
 vk.set('n', '<leader>o', '<cmd>update<CR>,<cmd>source<CR>', { desc = "Source file" })
 vk.set('n', '<leader>w', '<cmd>write<CR>', { desc = "Save" })
@@ -56,3 +58,7 @@ vk.set('n', '<leader>P', '"+P', { desc = "Paste from \"+ (before cursor)"})
 
 -- system highlights
 vk.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "clear highlights"})
+
+-- unix functions
+vk.set('n', '<leader>uc', '<cmd>! chmod +x '..cb..'<CR>', { desc = "Make current buffer executable"})
+vk.set('n', '<leader>ux', '<cmd>! '..cb..'<CR>', { desc = "Execute current buffer"})

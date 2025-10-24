@@ -39,6 +39,7 @@ require("oil").setup({
         ["g."] = { "actions.toggle_hidden", mode = "n" },
         ["g\\"] = { "actions.toggle_trash", mode = "n" },
         ["<C-l>"] = false,
+        ["<C-h>"] = false,
     },
 })
 

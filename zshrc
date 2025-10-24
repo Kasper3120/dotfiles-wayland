@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
@@ -133,6 +133,10 @@ kclash() {
     if [ $? -ne 0 ] && [ $? -ne 130 ] && [ -n "$3" ]; then
         kubectl --kubeconfig ~/clarin/clarin.yaml exec -it -n "$1" "$2" -- $3
     fi
+}
+
+batman() {
+    man $@ | bat -l man --style=plain
 }
 
 
