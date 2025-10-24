@@ -59,6 +59,7 @@ vk.set('n', '<leader>P', '"+P', { desc = "Paste from \"+ (before cursor)"})
 -- system highlights
 vk.set('n', '<leader>nh', '<cmd>nohl<CR>', { desc = "clear highlights"})
 
--- unix functions
-vk.set('n', '<leader>uc', '<cmd>! chmod +x '..cb..'<CR>', { desc = "Make current buffer executable"})
-vk.set('n', '<leader>ux', '<cmd>! '..cb..'<CR>', { desc = "Execute current buffer"})
+-- chmod and execute
+local buf_name = vim.api.nvim_buf_get_name(0)
+vk.set('n', '<leader>ux', '<cmd>! chmod +x '..buf_name..'<CR>', { desc = "make current buffer executable"})
+vk.set('n', '<leader>ue', '<cmd>! '..buf_name..'<CR>', { desc = "execute current buffer"})
