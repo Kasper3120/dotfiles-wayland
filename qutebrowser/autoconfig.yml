@@ -8,12 +8,14 @@ config_version: 2
 settings:
   backend:
     global: webengine
+  colors.tabs.pinned.even.bg:
+    global: darkseagreen
   colors.webpage.bg:
     global: null
   colors.webpage.darkmode.algorithm:
     global: lightness-cielab
   colors.webpage.darkmode.enabled:
-    global: false
+    global: true
   colors.webpage.darkmode.policy.images:
     global: never
   content.headers.user_agent:
@@ -29,3 +31,5 @@ settings:
     global: true
   content.xss_auditing:
     global: false
+  fonts.default_family:
+    global: null
