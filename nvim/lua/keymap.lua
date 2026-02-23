@@ -1,4 +1,3 @@
-
 local vk = vim.keymap
 local cb = vim.api.nvim_buf_get_name(0)
 

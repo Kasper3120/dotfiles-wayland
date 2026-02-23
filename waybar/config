@@ -9,7 +9,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "tray", "battery"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "tray", "network", "custom/vpn", "battery"],
     "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": false,
@@ -54,10 +54,18 @@
     },
     
     "network": {
-        "interface": "wlan0", // (Optional) To force the use of this interface
+        // "interface": "wlan0", // (Optional) To force the use of this interface
         "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-ethernet": "{ifname}: {ipaddr} ",
         "format-disconnected": "Disconnected ⚠"
+    },
+
+    "custom/vpn": {
+        "hide-empty-text": true,
+        "exec": "ip -brief addr show dev tun0 | awk '{print $3}' | cut -f1 -d'/'",
+        "return-type": "text",
+        "format": "vpn: {text}",
+        "interval": "30"
     },
    
     "pulseaudio": {

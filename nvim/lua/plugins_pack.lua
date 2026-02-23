@@ -37,6 +37,6 @@ vim.pack.add({
 	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/jasonccox/vim-wayland-clipboard" },
 	{ src = "https://github.com/folke/which-key.nvim" },
-	{ src = "https://codeberg.org/mfussenegger/nvim-jdtls" },
 	{ src = "https://github.com/ThePrimeagen/vim-be-good" },
+    { src = "https://github.com/nvim-java/nvim-java.git" },
 })
