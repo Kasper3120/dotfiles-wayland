@@ -1,1 +1,4 @@
 term=kitty
+insensitive=true
+gtk_dark=true
+close_on_focus_loss=true

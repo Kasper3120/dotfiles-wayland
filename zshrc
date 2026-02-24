@@ -8,6 +8,8 @@ fi
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+export QT_QPA_PLATFORMTHEME=gtk3
+
 # Path to your Oh My Zsh installation.
 ZSH=/usr/share/oh-my-zsh/
 
@@ -149,6 +151,12 @@ source $ZSH/oh-my-zsh.sh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export EDITOR="/usr/bin/env nvim"
+
+# colors
+export MANPAGER="bat -plman"
+alias ip="ip --color=auto"
+alias diff="diff --color=auto"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

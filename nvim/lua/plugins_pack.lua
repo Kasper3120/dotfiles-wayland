@@ -1,4 +1,5 @@
 vim.pack.add({
+	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	-- telescope deps
 	{ src = "https://github.com/nvim-lua/plenary.nvim" },
@@ -34,7 +35,6 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 	{ src = "https://github.com/nvim-lua/lsp-status.nvim" },
 	{ src = "https://github.com/nvim-lualine/lualine.nvim" },
-	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/jasonccox/vim-wayland-clipboard" },
 	{ src = "https://github.com/folke/which-key.nvim" },
 	{ src = "https://codeberg.org/mfussenegger/nvim-jdtls" },
